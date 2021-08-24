@@ -434,16 +434,4 @@ order: [['createdAt', 'DESC']]
 
 #### MariaDB Timezone KST로 변경 완료
 
----
-
-CREATE TABLE filedata(
-    fid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    pid INT NOT NULL,
-    filename VARCHAR(40) NOT NULL,
-    mimetype VARCHAR(255) NOT NULL,
-    filepath VARCHAR(40) NOT NULL,
-    size INT NOT NULL,
-    CONSTRAINT pid_filedata FOREIGN KEY (pid) REFERENCES chall(pid) ON DELETE CASCADE
-)
-DEFAULT CHARSET = utf8,
 ENGINE = InnoDB;
